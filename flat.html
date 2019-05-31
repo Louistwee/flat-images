@@ -2,13 +2,16 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <script src="script.js"></script>
 <body>
-<input type="file" placeholder="upload image">
-<div id="overlay"></div>
-<div id="start block"></div>
+<input type="file" id="input" placeholder="upload image" oninput="displayimage()">
 <div id="result">
 Result:
 x:<span id="x"></span>
 z:<span id="z"></span>
 </div>
+<div id="container">
+  <div id="overlay"></div>
+  <img src="" id="img">
+  <div id="start block"></div>
+<div>
 </body>
 </html>
