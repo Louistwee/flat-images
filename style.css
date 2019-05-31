@@ -1,26 +1,46 @@
 .point{
-  width:5px;
-  height:5px;
-  border:5px solid white;
+  width:0px;
+  height:0px;
+  border:10px solid white;
   border-radius:50%;
-  border-color:red green blue yellow;
+  border-color:red transparent blue transparent;
   position:absolute;
   top:0;
   left:0;
+  animation: rotate 3s infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotate {
+  from {
+    transform:rotate(0deg); 
+  }
+
+  to {
+    transform:rotate(360deg); 
+  }
 }
 .container{
   position:relative;
   border:2px solid grey;
   height:300px;
   overflow:scroll;
+  resize:vertical;
+  grid-area:img;
 }
-#imgResult{
-  transform:matrix(1, 0, 0, 1, 0, 0);
-  position:absolute;
-  left:1000px;
-  top:1000px;
+body{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title controls"
+    "img img"
+    "result result";
 }
-.sizer{
-  width:2000px;
-  height:2000px;
+#titlefile{
+  grid-area:title;
+}
+#controls{
+  grid-area:controls;
+}
+#result{
+  grid-area:result;
 }
