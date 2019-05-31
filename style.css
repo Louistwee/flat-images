@@ -1,0 +1,26 @@
+.point{
+  width:5px;
+  height:5px;
+  border:5px solid white;
+  border-radius:50%;
+  border-color:red green blue yellow;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.container{
+  position:relative;
+  border:2px solid grey;
+  height:300px;
+  overflow:scroll;
+}
+#imgResult{
+  transform:matrix(1, 0, 0, 1, 0, 0);
+  position:absolute;
+  left:1000px;
+  top:1000px;
+}
+.sizer{
+  width:2000px;
+  height:2000px;
+}
