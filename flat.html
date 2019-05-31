@@ -1,17 +1,26 @@
-<html>
-<link rel="stylesheet" href="style.css" type="text/css">
-<script src="script.js"></script>
-<body>
 <input type="file" id="input" placeholder="upload image" oninput="displayimage()">
 <div id="result">
 Result:
 x:<span id="x"></span>
 z:<span id="z"></span>
 </div>
-<div id="container">
+<div>controls:
+  <table>
+    <tr><th>Controls</th><th>X</th><th>Y</th></tr>
+    <tr><th>Point 1</th><td><input oninput="move(this.value,0,'x')" type="number" value="787"></td><td><input oninput="move(this.value,0,'y')" type="number" value="413"></td></tr>
+    <tr><th>Point 2</th><td><input oninput="move(this.value,1,'x')" type="number" value="665"></td><td><input oninput="move(this.value,1,'y')" type="number" value="560"></td></tr>
+    <tr><th>Point 3</th><td><input oninput="move(this.value,2,'x')" type="number" value="875"></td><td><input oninput="move(this.value,2,'y')" type="number" value="516"></td></tr>
+  </table>
+</div>
+<div class="container">
   <div id="overlay"></div>
-  <img src="" id="img">
-  <div id="start block"></div>
-<div>
-</body>
-</html>
+  <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia-curse.cursecdn.com%2Fattachments%2F122%2F698%2F241535e02ed013bef9ec884384ed551d.png&f=1" id="img">
+  <div class="point" id="point1"></div>
+  <div class="point" id="point2"></div>
+  <div class="point" id="point3"></div>
+  <div class="point" id="point4"></div>
+</div>
+<div class="container">
+  <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia-curse.cursecdn.com%2Fattachments%2F122%2F698%2F241535e02ed013bef9ec884384ed551d.png&f=1" id="imgResult">
+  <div class="sizer"></div>
+</div>
